@@ -156,6 +156,11 @@ html{scroll-behavior:smooth}
 .tp-meta dd{margin:2px 0 0;font-weight:600}
 .chapter{padding-block:56px;scroll-margin-top:60px}
 .chapter.alt{background:var(--soft)}
+/* Background artwork: visible under the title gradient, faint behind the history chapter */
+.hero,#ch1{position:relative;isolation:isolate;overflow:hidden}
+.hero::after,#ch1::after{content:"";position:absolute;inset:0;z-index:-1;background:url("img/kurultai-bg.jpg") center/cover no-repeat;pointer-events:none}
+.hero::after{opacity:.28;mix-blend-mode:luminosity}
+#ch1::after{opacity:.12}
 #ch3{padding-bottom:12px}
 .ch-label{color:var(--gold);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;margin-bottom:6px}
 .chapter h2{font-size:clamp(1.6rem,3.6vw,2.3rem);margin-bottom:14px}
@@ -314,9 +319,9 @@ main.wrap{padding-block:18px 40px}
     <h1>Цифрлық Мектеп <span>Құрылтайы</span></h1>
     <p class="tp-sub">Көне құрылтай дәстүрі мен жасанды интеллект тоғысындағы оқушылардың ортақ шешім қабылдау моделі</p>
     <dl class="tp-meta">
-      <div><dt>Орындаған</dt><dd>[Аты-жөні], [сынып] оқушысы</dd></div>
-      <div><dt>Ғылыми жетекші</dt><dd>Берік Жұбанышев</dd></div>
-      <div><dt>Мектеп</dt><dd>[Мектеп атауы]</dd></div>
+      <div><dt>Орындаған</dt><dd>Темірхан Айбар Берікұлы, №202 мектеп-гимназиясының 8 «Г» сынып оқушысы</dd></div>
+      <div><dt>Ғылыми жетекші</dt><dd>Елшібаева Ғалия Қамытбекқызы, №202 мектеп-гимназиясының қазақ тілі мен әдебиеті пәні мұғалімі, педагог-сарапшы</dd></div>
+      <div><dt>Мектеп</dt><dd>№202 мектеп-гимназия</dd></div>
       <div><dt>Жылы</dt><dd>2026</dd></div>
     </dl>
   </div>
@@ -353,6 +358,7 @@ main.wrap{padding-block:18px 40px}
       <li><time>XVII–XVIII ғғ.</time><div><b>«Күлтөбенің басында күнде кеңес»</b><p>Тәуке хан тұсында үш жүздің билері кеңесте дауларды шешіп, «Жеті жарғы» заңдар жинағы қалыптасты.</p></div></li>
       <li><time>1726 ж.</time><div><b>Ордабасы жиыны</b><p>Үш жүздің өкілдері жоңғар шапқыншылығына қарсы бірігу туралы ортақ шешім қабылдады.</p></div></li>
       <li><time>2022 ж.</time><div><b>Ұлттық құрылтай</b><p>Ұлытауда Ұлттық құрылтайдың алғашқы отырысы өтті. Дәстүр қазіргі мемлекеттік институтқа айналды.</p></div></li>
+      <li><time>2026 ж.</time><div><b>Конституциялық реформа</b><p>Референдумда жаңа Конституция қабылданып, Құрылтай заң шығарушы жоғары өкілді орган ретінде бекітілді.</p></div></li>
       <li class="now"><time>Бүгін</time><div><b>Цифрлық Мектеп Құрылтайы</b><p>Осы дәстүрдің тағылымы мектеп өміріне цифрлық түрде көшеді.</p></div></li>
     </ol>
 
